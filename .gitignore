@@ -1,22 +1,75 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.log
+*.tmp
+*.swp
+
+# === Virtual Environments ===
+venv/
+.env/
+env/
+.venv/
+*.env
+
+# === IDE & Editor ===
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Build & Dist ===
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# === Data & Artifacts ===
+data/crawled_pages/
+data/vector_store/
+data/logs/
+data/*.json
+data/*.csv
+*.sqlite
+*.db
+
+# === Model / Embedding Cache ===
+models/
+.cache/
+huggingface/
+sentence_transformers/
+faiss_index/
+chromadb/
+chroma/
+index_store/
+
+# === Test & Coverage ===
+.coverage
+htmlcov/
+pytest_cache/
+tests/__pycache__/
+
+# === Notebooks ===
+*.ipynb_checkpoints/
+
+# === Temporary ===
+tmp/
+temp/
+*.bak
+
+# === Secrets (API keys etc.) ===
+*.key
+*.pem
+*.crt
+*.token
+*.secret
+secrets/
