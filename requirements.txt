@@ -1,0 +1,29 @@
+# === Core Web Crawling ===
+requests==2.32.3
+beautifulsoup4==4.12.3
+trafilatura==1.9.0
+tqdm==4.66.5
+
+# === Text Processing & Data ===
+numpy==1.26.4
+pandas==2.2.3
+
+# === Embedding & Vector Index ===
+sentence-transformers==3.2.1
+faiss-cpu==1.9.0
+chromadb==0.5.3
+
+# === LLM Interface ===
+openai==1.51.2    # can be replaced by another model wrapper if using local LLM
+
+# === API / CLI Frameworks ===
+fastapi==0.115.0
+uvicorn==0.30.6
+click==8.1.7
+
+# === Utilities & Logging ===
+python-dotenv==1.0.1
+rich==13.9.2
+
+# === Testing ===
+pytest==8.3.3
