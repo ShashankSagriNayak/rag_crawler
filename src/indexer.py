@@ -22,7 +22,7 @@ class Indexer:
             start += self.chunk_size - self.chunk_overlap
         return chunks
 
-    def build_index(self):
+    def build_index(self,chunk_size=800, chunk_overlap=100,embedding_model="all-MiniLM-L6-v2"):
         all_chunks, metadata = [], []
 
         for file in os.listdir("data/crawled_pages"):

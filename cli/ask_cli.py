@@ -1,7 +1,7 @@
 import argparse
 import json
 import time
-from src.qa_service import ask_question
+from src.qa_service import QAService
 
 def main():
     parser = argparse.ArgumentParser(description="Ask questions grounded in crawled website data.")
@@ -13,7 +13,7 @@ def main():
     print(f"🤖 Answering question: '{args.question}'")
     start_time = time.time()
 
-    response = ask_question(
+    response = QAService().ask(
         question=args.question,
         top_k=args.top_k
     )

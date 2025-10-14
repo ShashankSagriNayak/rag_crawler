@@ -1,7 +1,7 @@
 import argparse
 import json
 import time
-from src.indexer import build_index
+from src.indexer import Indexer
 
 def main():
     parser = argparse.ArgumentParser(description="Index crawled website pages into vector store.")
@@ -14,7 +14,7 @@ def main():
     print("🔧 Starting indexing...")
     start_time = time.time()
 
-    result = build_index(
+    result = Indexer().build_index(
         chunk_size=args.chunk_size,
         chunk_overlap=args.chunk_overlap,
         embedding_model=args.embedding_model

@@ -58,6 +58,13 @@ class Crawler:
         return {"page_count": page_count, "skipped_count": skipped, "urls": list(self.visited)}
 
 
+# ✅ Wrapper function for CLI
+def crawl_website(start_url, max_pages=30, max_depth=2, crawl_delay_ms=1000):
+    """Wrapper used by CLI and API"""
+    crawler = Crawler(start_url, max_pages=max_pages, crawl_delay=crawl_delay_ms / 1000)
+    return crawler.crawl()
+
+
 if __name__ == "__main__":
-    crawler = Crawler("https://example.com", max_pages=10)
+    crawler = Crawler("https://example.com", max_pages=5)
     print(crawler.crawl())
