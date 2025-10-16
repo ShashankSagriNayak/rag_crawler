@@ -2,9 +2,12 @@ import os
 import time
 import google.generativeai as genai
 from src.retriever import Retriever # Assuming this is your custom retriever class
+from dotenv import load_dotenv
+# Load environment variables from .env
+load_dotenv()
 
 # Configure the Gemini API key once when the application starts
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 class QAService:
     def __init__(self):
